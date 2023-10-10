@@ -1,0 +1,733 @@
+/*===================================================
+template name : ecommerce | Carlos portfolio HTML template 
+Author: ilyass kaneki
+Version: 1.0
+====================================================*/
+/* start global classes */
+:root {
+
+  /* body bg color */
+  /* --bodyColor: #fae4dc; */
+
+  /* Primary Color */
+  --primaryColor: #2D2E2F;
+
+  /* Secondary Color */
+  --secendaryColor: #666666;
+
+  /* border radius */
+  --border-radius: 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primaryColor);
+  background-color: #f8eeea;
+  text-align: left;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: white;
+  background-color: rgb(255, 106, 0);
+}
+
+/* section{
+  padding-top: 10px;
+  padding: 4rem 9.5% 10rem  9.5%;
+} */
+section {
+  background: var(--bodyColor);
+}
+
+/* ==== start  preloader style  ===== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bodyColor);
+  z-index: 9999;
+}
+
+.spinner {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  border: 16px solid #e6e6e6;
+  border-top: 16px solid var(--secendaryColor);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==== end  preloader style  ===== */
+
+/* ======== start scroll-to-top button style  =========== */
+
+#progress {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: -2px -1px 20px 20px rgb(47 44 44 / 23%);
+  ;
+  cursor: pointer;
+  z-index: 800;
+}
+
+.bi-arrow-up-short::before {
+  content: "\f145";
+  color: white;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  border-radius: 50%;
+  display: grid;
+  background-color: var(--bodyColor);
+  place-items: center;
+  font-size: 35px;
+  color: var(--blueColor);
+}
+
+.spinner {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  border: 16px solid #e6e6e6;
+  border-top: 16px solid var(--secendaryColor);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+/* ======== end scroll-to-top button style  =========== */
+/*================== start navbar section ==================*/
+header {
+  background-color: #000000;
+}
+
+header .navbar .container {
+  padding-bottom: 10px;
+}
+
+.navbar {
+  z-index: 900;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  background: black;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: rgb(255 255 255);
+}
+
+.navbar ul li .dropdown-item,
+.navbar ul li .dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.navbar ul li a {
+  font-weight: 600;
+  margin-inline: 10px;
+  color: var(--secendaryColor);
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: var(--primaryColor) !important;
+}
+
+/*================== End navbar section ==================*/
+/*================== start navbar section ==================*/
+.navbar {
+  z-index: 900;
+  top: 10px;
+}
+
+.navbar ul li .dropdown-item,
+.navbar ul li .dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.navbar ul li a {
+  font-weight: 600;
+  font-size: 20px;
+  margin-inline: 10px;
+  color: rgb(135, 136, 135);
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: rgb(255, 255, 255) !important;
+}
+
+a.navbar-brand.logo {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  a.navbar-brand.logo {
+    font-size: 25px;
+  }
+}
+
+a.btn.ms-auto {
+  font-family: 'Courier New', Courier, monospace;
+  background: #282828;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+a.btn.ms-auto:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+button.navbar-toggler {
+  background: #e6e6e6;
+  padding: 1px;
+}
+
+/*================== End navbar section ==================*/
+
+/* ============== Start Hero section ==========  */
+.hero .container .card {
+  margin: 30px 0px 30px 0px;
+}
+
+.hero .container .card .row .card {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.hero .container .card .row {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* **********start icon menu******** */
+
+.hero .icon-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0px 20px 5px;
+}
+
+.hero .icon-menu .bi {
+  font-size: 16px;
+  padding-right: 10PX;
+}
+
+.hero .icon-menu .bi>a {
+  position: relative;
+  font-size: 16px;
+  text-decoration: none;
+  left: 10px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.hero .icon-menu .bi>a:hover {
+  color: #545151;
+  text-decoration: underline;
+}
+
+/***********End icon menu********* */
+
+div.card.end {
+  border: none;
+}
+
+img.card-img-end {
+  object-fit: cover;
+  height: 168px;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.card.end>.btn.btn-primary.arrow {
+  background-color: #000000;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  background: #2D2E2F;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.card.end>.btn.btn-primary.none-arrow {
+  border: 2px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  background: #ffffff;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.card.end>.btn.btn-primary.arrow s {
+  font-size: 20px;
+  width: 1200px;
+  color: #fff;
+  font-weight: 900;
+  padding-left: 33px;
+  animation: width-icon 1s infinite alternate;
+  left: -10px;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 200px;
+  top: 4px;
+}
+
+
+@keyframes width-icon {
+  from {
+    color: rgb(0, 0, 0);
+  }
+
+  to {
+    color: rgb(255, 255, 255);
+    left: 20px;
+  }
+}
+
+.card.end>.btn.btn-primary:hover,
+.card.end>.btn.btn-primary s:hover {
+  background: #949292;
+  color: #ffffff;
+}
+
+
+/* ============== End Hero section ==========  */
+
+
+/* ==================Start Today's Deals===============  */
+.today {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.today>.container>.text-title {
+  padding-bottom: 20px;
+}
+
+.today>.container>.text-title h1 {
+  font-weight: 900;
+}
+
+.today>.container>.text-title>span>a {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(140, 140, 211);
+}
+
+.today>.container>.text-title>span>a:hover {
+  color: #373535;
+}
+
+.today .container>.row {
+  row-gap: 35px;
+}
+
+.today .container>.row .card {
+  box-shadow: 4px 6px 38px 0px #00000042;
+}
+
+@media (max-width: 767px) {
+  .image-menu {
+    flex-direction: column;
+  }
+}
+
+.today .image-menu .image {
+  width: 50%;
+}
+
+.today .image-menu .image>img {
+  width: 100%;
+  height: 100%;
+}
+
+.today .card .text-menu h3 {
+  font-size: 20px;
+  padding: 20px 0px 10px 0px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.today .card .text-menu p {
+  font-size: 15px;
+  font-weight: 800;
+  color: #545151;
+}
+
+.today .card .text-menu h4 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #5f5cc4;
+}
+
+.today .card .text-menu h4 del {
+  font-size: 10px;
+  font-weight: 800;
+  color: #545151;
+}
+
+.today .card .text-menu >span.bi{
+  padding-top: 10px;
+  color: #dcc411;
+  padding-top: 10px;
+}
+
+.today .card .text-menu .days-icon {
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+.today .card .text-menu .days-icon span {
+  border: 1px solid;
+  border: transparent 2px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  padding: 0px;
+  font-size: 12px;
+  background-color: coral;
+}
+
+.today .card .text-menu .days-icon a.add-cart {
+  border: rgb(255, 114, 63) 2px solid;
+  padding: 4px;
+  width: 80%;
+  justify-content: center;
+  font-size: 16px;
+  background-color: coral;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.today .card .text-menu .days-icon a.add-cart:hover {
+  border: rgb(255, 114, 63) 2px solid;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+/* ==================End Today's Deals===============  */
+
+
+
+/* ==================Start Hot Deals===============  */
+
+.Hot {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.Hot>.container>.text-title {
+  padding-bottom: 20px;
+}
+
+.Hot>.container>.text-title h1 {
+  font-weight: 900;
+}
+
+.Hot>.container>.text-title>span>a {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(140, 140, 211);
+}
+
+.Hot>.container>.text-title>span>a:hover {
+  color: #373535;
+}
+
+.Hot .container>.row {
+  row-gap: 35px;
+}
+
+.Hot .container>.row .card {
+  box-shadow: 4px 6px 38px 0px #00000042;
+}
+
+.Hot .image-menu{
+  width: 100%;
+}
+
+.Hot .container .text-menu >div.container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.Hot .container .text-menu .container .text-mini h3{
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.Hot .container .text-menu .container .text-mini h4{
+  font-size: 15px;
+  color: #5f5cc4;
+}
+
+.Hot .container .text-menu .container p{
+  font-size: 13px;
+  color: #545151;
+}
+
+.Hot .container .text-menu .container .text-sold>span{
+  font-size: 13px;
+  color: #254b98;
+}
+
+.Hot .container .text-menu .container .text-sold>span.bi{
+  font-size: 13px;
+  color: #ff4800;
+}
+
+.Hot .container .text-menu .container .text-sold>span.bi>span{
+  font-size: 13px;
+  color: #0b0b0b;
+}
+/* ==================End Hot Deals===============  */
+
+
+/* ===================Start Ads=================  */
+.ads{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.ads .card{
+  background: #0f1010;
+}
+.ads .container .card{
+  padding: 40px;
+}
+
+.ads .container .row{
+  row-gap: 36px;
+}
+
+
+.ads .container .row .image img{
+  border-radius: 20px;
+}
+
+.ads .container .row .text-ads h6{
+  color: #aca9a9;
+  font-size: 13px;
+}
+
+.ads .container .row .text-ads h1{
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.ads .container .row .days-icon {
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+
+.ads .container .row .days-icon a.add-cart {
+  border: rgb(255, 114, 63) 2px solid;
+  justify-content: center;
+  font-size: 16px;
+  background-color: coral;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.ads .container .row .days-icon a.add-cart:hover {
+  border: rgb(255, 114, 63) 2px solid;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+/* ===================End Ads=================  */
+
+
+
+/* ========================Start Home and Outdoor=================== */
+.outdor .container .row .image-dark .texte-image{
+  position: relative;
+  top: -205px;
+}
+
+.outdor .image-dark{
+  padding-top: 25%;
+}
+
+.outdor .container  .row .image-dark>img{
+  filter: brightness(0.5);
+}
+
+.outdor .container .row .image-dark>img:hover{
+  filter: brightness(1);
+}
+
+.outdor .container .row .image-dark .texte-image h4{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, auto;
+  text-shadow: 2px 3px 0px black;
+}
+
+.outdor .container .bozz{
+  border: 1px solid rgba(0, 0, 0, 0.492);
+  border-radius: 5px;
+}
+
+.outdor .container .bozz .text-image{
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.outdor .container .row .days-icon a.add-cart {
+  border: rgb(255, 114, 63) 2px solid;
+  justify-content: center;
+  font-size: 16px;
+  background-color: coral;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.outdor .container .row .days-icon a.add-cart:hover {
+  border: rgb(255, 114, 63) 2px solid;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+/* ========================End Home and Outdoor=================== */
+
+
+
+
+/* ===================Start about=================  */
+.about{
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+}
+.about{
+  background: #0f1010;
+}
+
+.about .container .row {
+  padding-bottom: 50px;
+}
+
+.about .container .row h5{
+  color: #ffffff;
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 700;
+}
+
+.about .container .row a{
+  color: #9b9999;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.about .container .row a.btn{
+  color: #ffffff;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.about .container .row a:hover{
+  color: #f9f9f9;
+}
+
+.ads .container .row .days-icon {
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+.about .container .copy-2023{
+  border-top: 1px solid;
+  color: #ffffff;
+}
+
+.about .container .copy-2023 a{
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about .container .copy-2023 .menu-icon a{
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about .container .copy-2023 .menu-icon a:hover{
+  color: #868383;
+  padding: 0px;
+  border-radius: 50%;
+}
+/* ===================End About=================  */

@@ -1,0 +1,235 @@
+/* ====== start breadcrumbs style========= */
+
+.breadcrumbs {
+    background: black;
+    min-height: 40px;
+    margin-top: 82px;
+    color: rgb(114, 111, 111);
+}
+
+@media (max-width: 992px) {
+    .breadcrumbs {
+        margin-top: 57px;
+    }
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs h2 {
+    color: var(--bodyColor);
+}
+
+.breadcrumbs ol a {
+    color: #e6e6e6;
+    transition: 0.3s;
+}
+
+.breadcrumbs p {
+    color: #ddd7d7;
+}
+
+.breadcrumbs ol li+li {
+    padding-left: 10px;
+    color: #F9F9F9;
+}
+
+.breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #F8F6F4;
+    content: "/";
+}
+
+/* ====== end breadcrumbs style ========= */
+
+/*============== Start contact section ==========*/
+.contact .info {
+    display: flex;
+    align-items: center;
+}
+
+.contact .info i {
+    color: rgb(255, 255, 255);
+    background-color: var(--primaryColor);
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    flex: 0.10;
+}
+
+.contact .info .text {
+    flex: 0.90;
+}
+
+.contact .info .text h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact .info .text h5 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secendaryColor);
+}
+
+.contact .main-form input,
+.contact .main-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: rgb(220, 220, 220);
+}
+
+.contact .main-form input:focus,
+.contact .main-form textarea:focus {
+    border-bottom: 2px solid var(--primaryColor);
+}
+
+.contact .row .main-form .btn{
+    background-color: rgb(26, 25, 25);
+    color: #fff;
+    font-size: 18p;
+}
+
+.contact .row .main-form .btn:hover{
+    background-color: rgb(84, 82, 82);
+}
+/*============== End contact section ==========*/
+
+
+/*============== start FAQ section ==========*/
+.faq .box {
+    border-bottom: 2px solid var(--secendaryColor);
+    padding-block: 1rem;
+}
+
+.faq .box i {
+    font-size: 20px;
+    color: var(--primaryColor);
+}
+
+/*============== End FAQ section ==========*/
+
+/*============== Start newsletter section ==========*/
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-radius: var(--border-radius);
+}
+
+.newsletter .form {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border: 2px solid var(--primaryColor);
+    border-radius: var(--border-radius);
+}
+
+.newsletter .form input {
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    flex: 0.75;
+    padding-left: 10px;
+}
+
+.newsletter .form button {
+    color: white;
+    background-color: var(--primaryColor);
+    height: 100%;
+    flex: 0.25;
+    border: 0;
+    outline: 0;
+}
+
+/*============== End newsletter section ==========*/
+
+/*============== End Footer section ==========*/
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer .box a {
+    color: #5f5c5c;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer .box a:hover {
+    color: #989797;
+}
+
+.footer .box p {
+    color: #ddd7d7;
+    font-weight: 400;
+}
+
+/* 
+.footer .box .logo img {
+    width: 50%;
+} */
+
+.footer .box a {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.footer h4 {
+    color: rgb(143, 141, 138);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 1rem 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.footer ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgb(171, 170, 170);
+}
+
+.footer ul li a i {
+    font-size: 12px;
+    color: rgb(214, 223, 249);
+}
+
+.footer .copyrights a {
+    color: rgb(139, 137, 137);
+}
+
+.footer .copyrights p {
+    color: #ddd7d7;
+}
+
+/*============== End Footer section ==========*/
